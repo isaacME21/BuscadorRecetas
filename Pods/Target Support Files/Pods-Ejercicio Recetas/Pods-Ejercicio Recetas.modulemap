@@ -1,0 +1,6 @@
+framework module Pods_Ejercicio_Recetas {
+  umbrella header "Pods-Ejercicio Recetas-umbrella.h"
+
+  export *
+  module * { export * }
+}

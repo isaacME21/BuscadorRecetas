@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipesTableViewController: UITableViewController {
     
@@ -42,10 +43,12 @@ class RecipesTableViewController: UITableViewController {
         }
         
         let recipeVM = self.recipeListMV.articleAtIndex(indexPath.row)
+        let url = URL(string: recipeVM.strMealThumb)
         
         cell.category.text = recipeVM.strCategory
         cell.name.text = recipeVM.strMeal
-        cell.imageView?.image = UIImage(named: "prueba")
+        cell.imageView?.kf.indicatorType = .activity
+        cell.imageView?.kf.setImage(with: url)
         return cell
     }
 

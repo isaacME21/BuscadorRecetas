@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EE24B5953E91A6DA9D100F7 /* Pods_Ejercicio_Recetas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E4D673AD8182D63484AB78 /* Pods_Ejercicio_Recetas.framework */; };
 		730784DB2607DEB5008C019F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730784DA2607DEB5008C019F /* AppDelegate.swift */; };
 		730784DD2607DEB5008C019F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730784DC2607DEB5008C019F /* SceneDelegate.swift */; };
 		730784E22607DEB5008C019F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730784E02607DEB5008C019F /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F45F3529E12512CADCD375A /* Pods-Ejercicio Recetas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ejercicio Recetas.debug.xcconfig"; path = "Target Support Files/Pods-Ejercicio Recetas/Pods-Ejercicio Recetas.debug.xcconfig"; sourceTree = "<group>"; };
+		532D468232683C1551609082 /* Pods-Ejercicio Recetas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ejercicio Recetas.release.xcconfig"; path = "Target Support Files/Pods-Ejercicio Recetas/Pods-Ejercicio Recetas.release.xcconfig"; sourceTree = "<group>"; };
 		730784D72607DEB5008C019F /* Ejercicio Recetas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ejercicio Recetas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		730784DA2607DEB5008C019F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		730784DC2607DEB5008C019F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		73F85A312607ED2D00122046 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		73F85A362607ED9A00122046 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		73F85A3A2607EF5F00122046 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		B3E4D673AD8182D63484AB78 /* Pods_Ejercicio_Recetas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ejercicio_Recetas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE24B5953E91A6DA9D100F7 /* Pods_Ejercicio_Recetas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AA3EEA4A0E75755F466BD00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F45F3529E12512CADCD375A /* Pods-Ejercicio Recetas.debug.xcconfig */,
+				532D468232683C1551609082 /* Pods-Ejercicio Recetas.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		42971FED7B3EE05246428787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E4D673AD8182D63484AB78 /* Pods_Ejercicio_Recetas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		730784CE2607DEB5008C019F = {
 			isa = PBXGroup;
 			children = (
 				730784D92607DEB5008C019F /* Ejercicio Recetas */,
 				730784D82607DEB5008C019F /* Products */,
+				3AA3EEA4A0E75755F466BD00 /* Pods */,
+				42971FED7B3EE05246428787 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 730784EB2607DEC7008C019F /* Build configuration list for PBXNativeTarget "Ejercicio Recetas" */;
 			buildPhases = (
+				5EAF1D9D2B21607FA2B697FB /* [CP] Check Pods Manifest.lock */,
 				730784D32607DEB5008C019F /* Sources */,
 				730784D42607DEB5008C019F /* Frameworks */,
 				730784D52607DEB5008C019F /* Resources */,
+				8FE4BE3385E25A7873E75E2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EAF1D9D2B21607FA2B697FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ejercicio Recetas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FE4BE3385E25A7873E75E2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ejercicio Recetas/Pods-Ejercicio Recetas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ejercicio Recetas/Pods-Ejercicio Recetas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ejercicio Recetas/Pods-Ejercicio Recetas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		730784D32607DEB5008C019F /* Sources */ = {
@@ -339,6 +408,7 @@
 		};
 		730784EC2607DEC7008C019F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F45F3529E12512CADCD375A /* Pods-Ejercicio Recetas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +428,7 @@
 		};
 		730784ED2607DEC7008C019F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532D468232683C1551609082 /* Pods-Ejercicio Recetas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -15,4 +15,6 @@ struct Recipe : Decodable{
     let strMeal : String
     let strCategory : String
     let strMealThumb : String
+    let idMeal: String
+    let strInstructions : String
 }

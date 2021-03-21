@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		73F85A322607ED2E00122046 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F85A312607ED2D00122046 /* WebService.swift */; };
 		73F85A372607ED9A00122046 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F85A362607ED9A00122046 /* Recipe.swift */; };
 		73F85A3B2607EF5F00122046 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F85A3A2607EF5F00122046 /* RecipeViewModel.swift */; };
+		73F85A422608037E00122046 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F85A412608037E00122046 /* RecipeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		73F85A312607ED2D00122046 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		73F85A362607ED9A00122046 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		73F85A3A2607EF5F00122046 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		73F85A412608037E00122046 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		B3E4D673AD8182D63484AB78 /* Pods_Ejercicio_Recetas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ejercicio_Recetas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				1F45F3529E12512CADCD375A /* Pods-Ejercicio Recetas.debug.xcconfig */,
 				532D468232683C1551609082 /* Pods-Ejercicio Recetas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -108,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				730784F02607E1CE008C019F /* RecipesTableViewController.swift */,
+				73F85A412608037E00122046 /* RecipeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +262,7 @@
 			files = (
 				730784F52607E249008C019F /* RecipeTableViewCell.swift in Sources */,
 				730784DB2607DEB5008C019F /* AppDelegate.swift in Sources */,
+				73F85A422608037E00122046 /* RecipeDetailViewController.swift in Sources */,
 				730784F12607E1CE008C019F /* RecipesTableViewController.swift in Sources */,
 				73F85A3B2607EF5F00122046 /* RecipeViewModel.swift in Sources */,
 				73F85A372607ED9A00122046 /* Recipe.swift in Sources */,

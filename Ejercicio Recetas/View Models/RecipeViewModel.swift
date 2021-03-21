@@ -18,7 +18,7 @@ struct RecipeListViewModel {
         return self.meals.count
     }
     
-    func articleAtIndex(_ index: Int) -> RecipeViewModel{
+    func recipeAtIndex(_ index: Int) -> RecipeViewModel{
         let recipe = self.meals[index]
         return RecipeViewModel(recipe)
     }
@@ -38,6 +38,13 @@ struct  RecipeViewModel{
     
     var strMealThumb : String {
         return self.recipe.strMealThumb
+    }
+    
+    var idMeal : String {
+        return self.recipe.idMeal
+    }
+    var strInstructions : String {
+        return self.recipe.strInstructions
     }
     
     init(_ recipe : Recipe) {

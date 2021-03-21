@@ -8,17 +8,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recipe Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejercicio_Recetas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeDetailViewController" id="BYZ-38-t0r" customClass="RecipeDetailViewController" customModule="Ejercicio_Recetas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8py-d3-xu3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ybK-dK-Mbk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nsd-xd-NN5">
+                                <rect key="frame" x="0.0" y="440" width="414" height="422"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Irv-sK-N0a" detailTextLabel="3DC-YA-fWr" style="IBUITableViewCellStyleSubtitle" id="8DB-Bd-sJY">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8DB-Bd-sJY" id="KiM-ab-dHW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Irv-sK-N0a">
+                                                    <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3DC-YA-fWr">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tM-xJ-V69">
+                                <rect key="frame" x="20" y="282" width="374" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Owu-e4-KY8"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instrucciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-4X-AW1">
+                                <rect key="frame" x="20" y="252" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8py-d3-xu3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="00H-dp-g8k"/>
+                            <constraint firstItem="0ja-4X-AW1" firstAttribute="top" secondItem="8py-d3-xu3" secondAttribute="bottom" constant="8" symbolic="YES" id="C1s-I8-D1D"/>
+                            <constraint firstItem="Nsd-xd-NN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fqg-Km-oVg"/>
+                            <constraint firstItem="0ja-4X-AW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LaE-MM-253"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tM-xJ-V69" secondAttribute="trailing" constant="20" id="OMM-ZV-LGe"/>
+                            <constraint firstItem="3tM-xJ-V69" firstAttribute="top" secondItem="0ja-4X-AW1" secondAttribute="bottom" constant="9" id="R2r-fd-tjG"/>
+                            <constraint firstItem="Nsd-xd-NN5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V2Q-en-x1v"/>
+                            <constraint firstItem="3tM-xJ-V69" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WZf-gJ-hM9"/>
+                            <constraint firstItem="Nsd-xd-NN5" firstAttribute="top" secondItem="3tM-xJ-V69" secondAttribute="bottom" constant="8" symbolic="YES" id="cGQ-Sq-3nQ"/>
+                            <constraint firstItem="Nsd-xd-NN5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dnn-6Q-ZGN"/>
+                            <constraint firstItem="8py-d3-xu3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="poJ-EH-kqY"/>
+                            <constraint firstItem="8py-d3-xu3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rfD-t9-4Dl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nqh-Fj-1f6"/>
+                    <connections>
+                        <outlet property="detailTextView" destination="3tM-xJ-V69" id="nfm-rr-8CE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +170,6 @@
                     <navigationItem key="navigationItem" title="Buscador de Recetas" id="CRZ-Tk-b3n"/>
                     <connections>
                         <outlet property="recipesSearchBar" destination="BoJ-CM-CR7" id="g9f-Iw-pH2"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="C2L-tp-AfG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvG-O2-kSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,6 +196,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

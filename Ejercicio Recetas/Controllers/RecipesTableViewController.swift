@@ -42,7 +42,7 @@ class RecipesTableViewController: UITableViewController {
             fatalError("RecipeTableViewCell not found")
         }
         
-        let recipeVM = self.recipeListMV.articleAtIndex(indexPath.row)
+        let recipeVM = self.recipeListMV.recipeAtIndex(indexPath.row)
         let url = URL(string: recipeVM.strMealThumb)
         
         cell.category.text = recipeVM.strCategory
@@ -50,6 +50,12 @@ class RecipesTableViewController: UITableViewController {
         cell.imageView?.kf.indicatorType = .activity
         cell.imageView?.kf.setImage(with: url)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "RecipeDetailViewController") as! RecipeDetailViewController
+        detailsVC.recipeVM = self.recipeListMV.recipeAtIndex(indexPath.row)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 
 }

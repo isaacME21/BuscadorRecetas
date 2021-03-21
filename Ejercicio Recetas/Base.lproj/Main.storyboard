@@ -24,10 +24,10 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nsd-xd-NN5">
-                                <rect key="frame" x="0.0" y="440" width="414" height="422"/>
+                                <rect key="frame" x="0.0" y="469" width="414" height="393"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Irv-sK-N0a" detailTextLabel="3DC-YA-fWr" style="IBUITableViewCellStyleSubtitle" id="8DB-Bd-sJY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientesCell" textLabel="Irv-sK-N0a" detailTextLabel="3DC-YA-fWr" style="IBUITableViewCellStyleSubtitle" id="8DB-Bd-sJY">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8DB-Bd-sJY" id="KiM-ab-dHW">
@@ -52,6 +52,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="BfD-9r-qTc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B9g-KR-HgD"/>
+                                </connections>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tM-xJ-V69">
                                 <rect key="frame" x="20" y="282" width="374" height="150"/>
@@ -70,11 +74,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYG-H1-W0v">
+                                <rect key="frame" x="20" y="440" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8py-d3-xu3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="00H-dp-g8k"/>
+                            <constraint firstItem="Nsd-xd-NN5" firstAttribute="top" secondItem="wYG-H1-W0v" secondAttribute="bottom" constant="8" symbolic="YES" id="8Up-J5-ltX"/>
                             <constraint firstItem="0ja-4X-AW1" firstAttribute="top" secondItem="8py-d3-xu3" secondAttribute="bottom" constant="8" symbolic="YES" id="C1s-I8-D1D"/>
                             <constraint firstItem="Nsd-xd-NN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fqg-Km-oVg"/>
                             <constraint firstItem="0ja-4X-AW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LaE-MM-253"/>
@@ -82,7 +93,8 @@
                             <constraint firstItem="3tM-xJ-V69" firstAttribute="top" secondItem="0ja-4X-AW1" secondAttribute="bottom" constant="9" id="R2r-fd-tjG"/>
                             <constraint firstItem="Nsd-xd-NN5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V2Q-en-x1v"/>
                             <constraint firstItem="3tM-xJ-V69" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WZf-gJ-hM9"/>
-                            <constraint firstItem="Nsd-xd-NN5" firstAttribute="top" secondItem="3tM-xJ-V69" secondAttribute="bottom" constant="8" symbolic="YES" id="cGQ-Sq-3nQ"/>
+                            <constraint firstItem="wYG-H1-W0v" firstAttribute="top" secondItem="3tM-xJ-V69" secondAttribute="bottom" constant="8" symbolic="YES" id="Xgf-mZ-cUq"/>
+                            <constraint firstItem="wYG-H1-W0v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cuA-nk-rrH"/>
                             <constraint firstItem="Nsd-xd-NN5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dnn-6Q-ZGN"/>
                             <constraint firstItem="8py-d3-xu3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="poJ-EH-kqY"/>
                             <constraint firstItem="8py-d3-xu3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rfD-t9-4Dl"/>
